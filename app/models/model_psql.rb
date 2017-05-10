@@ -18,7 +18,7 @@ class ModelPsql < ActiveRecord::Base
   end
 
   def self.find_by_exact_number(number)
-    ModelPsql.where("field @> {'number': '?'}", number)
+    ModelPsql.where("field ->> 'number' = '?'", number)
   end
 
   def self.find_greater_than_number(number)
