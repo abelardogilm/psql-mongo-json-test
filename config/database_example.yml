@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+
+development:
+  <<: *default
+  database: psql-mongo-json-test
+
+test:
+  <<: *default
+  database: psql-mongo-json-test-test
+
+production:
+  <<: *default
+  database: psql-mongo-json-test
