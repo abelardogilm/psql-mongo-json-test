@@ -13,7 +13,7 @@ gem 'pg'
 
 gem 'mongoid', '~> 6.1.0'
 
-gem 'lorem_ipsum_amet'
+gem 'faker'
 
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
