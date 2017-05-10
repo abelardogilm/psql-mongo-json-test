@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20170509160133) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "test_model_psqls", force: :cascade do |t|
+  create_table "model_psqls", force: :cascade do |t|
     t.json "field"
   end
 
