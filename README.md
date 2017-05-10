@@ -1,24 +1,22 @@
-# README
+Small project to compare Mongo and Psql working with JSON
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Requeriments
+* Postgresql >= 9.4.x
+* MongoDB
+* Ruby >= 2
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Setup
+* Copy and put your credentials on database connection files:
+```sh
+$ cp config/database.example.yml config/database.yml
+$ cp config/mongoid.example.yml config/mongoid.yml
+```
+* Install gems
+```sh
+bundle install
+```
+* Run rake migration to prepare Psql database
+```sh
+rake db:create
+rake db:migrate
+```
